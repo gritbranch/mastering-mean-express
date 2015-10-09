@@ -16,9 +16,10 @@
 //process.env is a global variable that allows you to access predefined environment variables, and the most common one is the NODE_ENV environment variable which is often used for environment-specific configurations
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-//Requires express module and creates a new Express application object.
-var express = require('./config/express');
+var mongoose = require('./config/mongoose'),	//Requires mongoose module and creates mongoose object.
+	express = require('./config/express'); 		//Requires express module and creates a new Express application object.
 
+var db = mongoose();
 var app = express();
 
 /* Before the horizontal folder structure

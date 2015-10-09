@@ -1,0 +1,19 @@
+Unix (Add):
+curl -X POST -H "Content-Type: application/json" -d '{"firstName":"First", "lastName":"Last","email":"user@example.com","username":"username","password":"password"}' localhost:3000/users
+
+Windows (Add):
+curl -X POST -H "Content-Type: application/json" -d "{\"firstName\":\"First\", \"lastName\":\"Last\",\"email\":\"user@example.com\",\"username\":\"username\",\"password\":\"password\"}" localhost:3000/users
+
+curl -X POST -H "Content-Type: application/json" -d "{\"firstName\":\"First2\", \"lastName\":\"Last2\",\"email\":\"user2@example.com\",\"username\":\"username2\",\"password\":\"password2\"}" localhost:3000/users
+
+Unix (Update):
+curl -X PUT -H "Content-Type: application/json" -d '{"lastName": "Updated"}' localhost:3000/users/[id]
+
+Windows (Add):
+curl -X PUT -H "Content-Type: application/json" -d "{\"lastName\": \"Updated\"}" localhost:3000/users/56179d620cea762c1e510903
+
+Unix (Delete):
+curl -X DELETE localhost:3000/users/[id]
+
+Windows (Delete):
+curl -X DELETE localhost:3000/users/56179d620cea762c1e510903
